@@ -6,8 +6,8 @@ to make NOC work easier, and as a portfolio project.
 
 ## Screenshot
 
-![Checklist with several hosts](images/checklist-main.png)
-![Popup for adding a new row](images/checklist-add.png)
+![Checklist with several hosts](image/checklist-main.png)
+![Popup for adding a new row](image/checklist-add.png)
 
 ## Features
 
