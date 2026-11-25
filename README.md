@@ -1,50 +1,53 @@
 # NOC Health and Incident Checklist
 
-I made this app to check what i've done and what isn't
-so i will not miss any daily check on every VM
-I made this for making NOC job easier and personal use
-Made for portfolio
+I made this app to keep track of what I have checked and what I haven't,
+so I don't miss any daily check on any VM. I built it for personal use,
+to make NOC work easier, and as a portfolio project.
 
 ## Screenshot
 
-![alt text](image/checklist-main.png)
-![alt text](image/checklist-add.png)
+![Checklist with several hosts](images/checklist-main.png)
+![Popup for adding a new row](images/checklist-add.png)
 
 ## Features
 
-- Manually add custom rows eg. IP Address, Hostname, ID, etc.
-- Respective checkboxes for each row
-- Clear all mark from all rows
-- Scrollable rows for very long rows
+- Add custom rows manually (for example IP address, hostname, or ID)
+- Four checkboxes per row: CPU, MEMORY, NETWORK, STORAGE
+- Clear button that unticks all boxes in every row
+- Scrollable list for long checklists
 
 ## How to run
 
-1. Install python
-2. Use "py main.py" in console
+1. Install Python 3.
+2. Open a terminal in the project folder.
+3. Run `py main.py`.
 
 ## How it works
 
-On add, tick and remove the app will save your action in checklist.json file with this format
-    "text": "1.1.1.1",
-    "checks": [
-      false,
-      false,
-      false,
-      false
-    ]
-text is the label of your row it can be anything you like
-checks is the checkbox with order of CPU, MEMORY, NETWORK, STORAGE
+When you add a row, tick a box, or remove a row, the app saves your
+changes to `checklist.json` in this format:
 
-## What i learned from this project
+```json
+{
+  "text": "1.1.1.1",
+  "checks": [false, false, false, false]
+}
+```
 
-- What NOC really do daily
-- Create UI with tkinter
-- Make JSON save file
-- Debugging
+`text` is the label of the row. It can be anything you like.
+`checks` holds the checkbox states in this order: CPU, MEMORY, NETWORK, STORAGE.
 
-## Future Improvements
+## What I learned from this project
 
-- I know this project have a problem when we working as NOC we wrote report and this doesn't have Issues note yet so in future update of this code i'll add a button on every row to be able to add note on any row that I have something to say
-- I like to add auto report generator that will print reported file in a document file for easier read and report what i've done and what i've checked also noted area
+- Building a user interface with tkinter
+- Saving and loading data with a JSON file
+- Making a long list scrollable
+- Debugging by reading Python error messages
 
-This project i made I focusing on personal use and put on portfolio
+## Future improvements
+
+- A note button on every row, so I can write notes about anything I
+  need to report. NOC engineers write reports, and this version has no
+  issue notes yet.
+- An automatic report generator that saves a document with the time, the
+  items I checked, and my notes, so the report is easier to read.
